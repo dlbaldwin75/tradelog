@@ -31,6 +31,15 @@
             font-weight: bold;
             margin-top: 10px;
         }
+        .inline-group {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+        }
+        .inline-group label, .inline-group input {
+            width: 48%;
+            text-align: center;
+        }
         input, textarea, select, button {
             width: 100%;
             padding: 10px;
@@ -67,8 +76,8 @@
 <body>
     <h1>Trade Log</h1>
     <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name"><br>
+        <label for="company-name">Company Name:</label>
+        <input type="text" id="company-name" name="company-name"><br>
 
         <label for="ticker">Ticker:</label>
         <input type="text" id="ticker" name="ticker"><br>
@@ -96,14 +105,14 @@
             <tbody>
                 <tr>
                     <td><input type="date" name="date"></td>
-                    <td><input type="number" name="price"></td>
+                    <td><input type="text" name="stock-price"></td>
                     <td><input type="text" name="option"></td>
-                    <td><input type="number" name="bid"></td>
-                    <td><input type="number" name="ask"></td>
+                    <td><input type="text" name="bid"></td>
+                    <td><input type="text" name="ask"></td>
                     <td><input type="number" name="contracts"></td>
-                    <td><input type="number" name="total-price"></td>
-                    <td><input type="number" name="profit-loss"></td>
-                    <td><input type="number" name="percentage-gain-loss"></td>
+                    <td><input type="text" name="total-price"></td>
+                    <td><input type="text" name="profit-loss"></td>
+                    <td><input type="text" name="percentage-gain-loss"></td>
                 </tr>
                 <!-- Add more rows as needed -->
             </tbody>
@@ -125,11 +134,13 @@
         <label for="upcoming-events">What upcoming event(s) might move this stock?</label>
         <textarea id="upcoming-events" name="upcoming-events"></textarea><br>
 
-        <label for="timeframe">3x Timeframe?</label>
-        <input type="text" id="timeframe" name="timeframe"><br>
+        <div class="inline-group">
+            <label for="timeframe">3x Timeframe?</label>
+            <input type="text" id="timeframe" name="timeframe">
 
-        <label for="direction">3x Direction?</label>
-        <input type="text" id="direction" name="direction"><br>
+            <label for="direction">3x Direction?</label>
+            <input type="text" id="direction" name="direction">
+        </div><br>
 
         <label for="trend-timeframe">Trend Timeframe?</label>
         <input type="text" id="trend-timeframe" name="trend-timeframe"><br>
