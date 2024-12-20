@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Trade Log Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #0056b3;
+        }
+        form {
+            width: 90%;
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        input, textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0056b3;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #004494;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        table th {
+            background-color: #0056b3;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trade Log</h1>
+    <form>
+        <label for="company-name">Company Name:</label>
+        <input type="text" id="company-name" name="company-name"><br>
+
+        <label for="ticker">Ticker:</label>
+        <input type="text" id="ticker" name="ticker"><br>
+
+        <label for="price-share">Price/Share:</label>
+        <input type="text" id="price-share" name="price-share"><br>
+
+        <label for="earnings-date">Earnings Date:</label>
+        <input type="date" id="earnings-date" name="earnings-date"><br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Stock Price</th>
+                    <th>Option</th>
+                    <th>Bid</th>
+                    <th>Ask</th>
+                    <th># of Contracts</th>
+                    <th>Total Price</th>
+                    <th>Profit or Loss</th>
+                    <th>Percentage Gain/Loss</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="date" name="date"></td>
+                    <td><input type="text" name="stock-price"></td>
+                    <td><input type="text" name="option"></td>
+                    <td><input type="text" name="bid"></td>
+                    <td><input type="text" name="ask"></td>
+                    <td><input type="number" name="contracts"></td>
+                    <td><input type="text" name="total-price"></td>
+                    <td><input type="text" name="profit-loss"></td>
+                    <td><input type="text" name="percentage-gain-loss"></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+
+        <label for="technique">What technique?</label>
+        <input type="text" id="technique" name="technique"><br>
+
+        <label for="daily-market">Direction of daily market (futures)?</label>
+        <input type="text" id="daily-market" name="daily-market"><br>
+
+        <label for="market-55">Direction of 55 market?</label>
+        <select id="market-55" name="market-55">
+            <option value="" disabled selected>Select an option</option>
+            <option value="up">Up</option>
+            <option value="down">Down</option>
+        </select><br>
+
+        <label for="upcoming-events">What upcoming event(s) might move this stock?</label>
+        <textarea id="upcoming-events" name="upcoming-events"></textarea><br>
+
+        <label for="timeframe">3x Timeframe?</label>
+        <input type="text" id="timeframe" name="timeframe"><br>
+
+        <label for="direction">3x Direction?</label>
+        <input type="text" id="direction" name="direction"><br>
+
+        <label for="trend-timeframe">Trend Timeframe?</label>
+        <input type="text" id="trend-timeframe" name="trend-timeframe"><br>
+
+        <label for="trend-direction">Trend Direction?</label>
+        <input type="text" id="trend-direction" name="trend-direction"><br>
+
+        <label for="market-calendar">Have you checked the market calendar?</label>
+        <input type="text" id="market-calendar" name="market-calendar"><br>
+
+        <label for="market-season">What is the Market Season?</label>
+        <input type="text" id="market-season" name="market-season"><br>
+
+        <label for="sector-leader">Who is Sector Leader?</label>
+        <input type="text" id="sector-leader" name="sector-leader"><br>
+
+        <label for="earnings-release">Their next earnings release is:</label>
+        <input type="date" id="earnings-release" name="earnings-release"><br>
+
+        <label for="exit-point">What is my exit point?</label>
+        <input type="text" id="exit-point" name="exit-point"><br>
+
+        <label for="loss">Where do I take the loss?</label>
+        <input type="text" id="loss" name="loss"><br>
+
+        <label for="reason-buy">What is my reason to buy?</label>
+        <textarea id="reason-buy" name="reason-buy"></textarea><br>
+
+        <label for="reason-sell">What is my reason to sell?</label>
+        <textarea id="reason-sell" name="reason-sell"></textarea><br>
+
+        <label for="other-info">What other info is part of your entry/exit decision?</label>
+        <textarea id="other-info" name="other-info"></textarea><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
